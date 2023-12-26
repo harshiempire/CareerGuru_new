@@ -49,8 +49,8 @@ const Login = () => {
   return (
     <div>
       <Navbar />
-      <section className="form mt-lg-5 my-4 mx-5">
-        <div className="container">
+      <section className="form logbox mx-lg-5">
+        <div className="">
           <div className="row no-gutters shadow-lg">
             <div className="col-lg-5 px-5 pt-5 text-md-start">
               <h1 className="fw-bold py-3">Login</h1>
@@ -78,7 +78,7 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-7">
+                  <div className="col-6">
                     <div className="form-check">
                       <input
                         className="form-check-input"
@@ -94,7 +94,7 @@ const Login = () => {
                       </label>
                     </div>
                   </div>
-                  <div className="col-5">
+                  <div className="col-6">
                     <NavLink to="/login">Forgot Password?</NavLink>
                   </div>
                   <div className="row pt-2">

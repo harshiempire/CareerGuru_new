@@ -4,17 +4,22 @@ import Modal from "./Modal";
 import Sidebar from "./Sidebar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Backdrop from "@mui/material/Backdrop";
+import CircularProgress from "@mui/material/CircularProgress";
+import Bottombar from "./Bottombar";
 
 const Dashboard = () => {
   const [joblist, setJobList] = useState([]);
   const [userData, setUserData] = useState([]);
   const [userSkills, setUserSkills] = useState([]);
-  const [obj, setObj] = useState({});
+  // const [obj, setObj] = useState({});
+  const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
 
   const match = (userS, jobS) => {
     const intersection = userS.filter((skill) => jobS.includes(skill));
+
     // console.log("user:", userS, "jobs:", jobS, "intersection:", intersection);
 
     const union = [...new Set([...userS, ...jobS])];
@@ -53,6 +58,7 @@ const Dashboard = () => {
     };
 
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Empty dependency array, runs only once when the component mounts
 
   useEffect(() => {
@@ -64,7 +70,7 @@ const Dashboard = () => {
           const filteredJobs = res.data.filter(
             (object) => match(userSkills, object.desiredSkills) > 0
           );
-
+          setLoading(false);
           setJobList(filteredJobs);
         }
       } catch (error) {
@@ -106,7 +112,24 @@ const Dashboard = () => {
                   Refresh
                 </button> */}
               </div>
-              <div className="col-lg-10 catter">{jobcont}</div>
+              <div className="col-lg-10 catter mb-5">
+                {loading ? (
+                  <div>
+                    <Backdrop
+                      sx={{
+                        color: "#fff",
+                        zIndex: (theme) => theme.zIndex.drawer + 1,
+                      }}
+                      open
+                    >
+                      <CircularProgress color="inherit" />
+                    </Backdrop>
+                  </div>
+                ) : (
+                  jobcont
+                )}
+              </div>
+              <Bottombar val={0} />
             </div>
           </div>
         </div>

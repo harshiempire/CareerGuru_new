@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Multiselect from "multiselect-react-dropdown";
-
+import Swal from "sweetalert2";
 import Sidebar from "./Sidebar";
 import { useNavigate } from "react-router-dom";
+import Bottombar from "./Bottombar";
 
 export default function UserInfo() {
   const navigate = useNavigate();
@@ -129,26 +130,35 @@ export default function UserInfo() {
   let name, value;
   const PostData = async (e) => {
     e.preventDefault();
-    // const data = await fetch("/update", {
-    //   method: "POST",
-    //   headers: {
-    //     Accept: "application/json",
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(user),
-    //   credentials: "include",
-    // });
-    // const res = await data.json();
-    // if (res.status === 422 || !res) {
-    //   const err = new Error(res.error);
-    //   throw err;
-    // } else {
-    //   setUserSkills(res.skills);
-    //   setSkills(res.skills);
-    //   setUserData(res);
-    //   setUser(res);
-    //   setEdit(false);
-    // }
+    try {
+      const data = await fetch("/update", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+        credentials: "include",
+      });
+      const res = await data.json();
+      console.log("res value before checking", data.status);
+      if (!(data.status === 200)) {
+        const err = new Error(res.error);
+        throw err;
+      } else {
+        console.log(res);
+        setUserSkills(res.skills);
+        setSkills(res.skills);
+        setUserData(res);
+        setUser(res);
+        Swal.fire("SUCCESS!", "Login successful", "success");
+        navigate("/settings");
+      }
+    } catch (err) {
+      const error = new Error(err);
+      navigate("/settings");
+      throw error;
+    }
   };
 
   const handleInputs = (e) => {
@@ -192,8 +202,10 @@ export default function UserInfo() {
   }, []);
 
   useEffect(() => {
-    console.log(user);
-  }, [user]);
+    console.log(userSkills);
+    console.log("skills inside the useEffect:", skills);
+    setEdit(false);
+  }, [userSkills]);
 
   return (
     <div>
@@ -378,6 +390,7 @@ export default function UserInfo() {
               )}
             </div>
           </div>
+          <Bottombar />
         </div>
       </div>
     </div>

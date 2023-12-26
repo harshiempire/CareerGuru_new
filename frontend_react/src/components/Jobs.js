@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import Multiselect from "multiselect-react-dropdown";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Jobs = () => {
   const [options, setOptions] = useState([
@@ -101,8 +108,28 @@ const Jobs = () => {
   }, [container]);
 
   return (
-    <div className="container mt-4">
-      <form method="POST">
+    <div className=" ">
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              News
+            </Typography>
+            <Button color="inherit">Edit Jobs</Button>
+            <Button color="inherit">Add Jobs</Button>
+          </Toolbar>
+        </AppBar>
+      </Box>
+      <form className="container mt-4" method="POST">
         <div className="col">
           <div className="form-row">
             <label for="companyName">Company Name</label>
@@ -198,7 +225,7 @@ const Jobs = () => {
                     }}
                     options={options}
                     showCheckbox
-                    selectionLimit={7}
+                    selectionLimit={20}
                   />
                 </div>
               </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
 import Setting from "./Setting";
 import { useNavigate } from "react-router-dom";
+import Bottombar from "./Bottombar";
 
 const Settings = () => {
   const navigate = useNavigate();
@@ -51,6 +52,7 @@ const Settings = () => {
               <div className="col-lg-10 catter">
                 <Setting userData={userData} userSkills={userSkills} />
               </div>
+              <Bottombar val={2} />
             </div>
           </div>
         </div>

@@ -34,8 +34,20 @@ ul {
     /* margin-bottom:4%; */
     margin-left: 0;
   }
+  .bottombar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+  }
 }
 .topbar {
   background-color: white;
   position: fixed;
+}
+@media screen and (min-width: 991.98px) {
+  .bottombar {
+    display: none;
+  }
+  
 }

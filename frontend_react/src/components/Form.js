@@ -182,7 +182,7 @@ const Form = () => {
       <Navbar />
       <div className="container-fluid home">
         <div className="row">
-          <div className="col-md-6 d-flex justify-content-center align-items-center">
+          {/* <div className="col-md-6 d-flex justify-content-center align-items-center">
             <div className="tryfixed">
               <div className="container">
                 <button
@@ -213,8 +213,9 @@ const Form = () => {
                 </button>
               </div>
             </div>
-          </div>
-          <div className="col-md-5 py-3 my-3">
+          </div> */}
+          <div className="col-lg-2"></div>
+          <div className="col-lg-8 py-3 my-3">
             <h3 className="text-center m-4">Create an account</h3>
             <form method="POST">
               <div className="col">
@@ -356,15 +357,14 @@ const Form = () => {
                   </form>
                 </div>
               </div>
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={PostData}
-              >
-                SUBMIT
-              </button>
+              <div className="text-center my-4 mx-lg-5">
+                <button type="submit" className="btn btn1 " onClick={PostData}>
+                  SUBMIT
+                </button>
+              </div>
             </form>
           </div>
+          <div className="col-lg-2"></div>
         </div>
       </div>
     </div>

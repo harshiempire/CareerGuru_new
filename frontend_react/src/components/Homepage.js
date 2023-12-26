@@ -18,13 +18,12 @@ const Homepage = () => {
             <div>
               <h1 className="headtext">Stuck deciding your career?</h1>
               <p className="lead my-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi libero sequi sed, unde ad veritatis molestias mollitia
-                tempore similique suscipit molestiae odio rem ea, fugiat tempora
-                temporibus, totam illum deserunt. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Cumque, inventore?Lorem ipsum
-                dolor sit amet consectetur, adipisicing elit. Fugiat nisi ullam
-                a aperiam autem at mollitia explicabo similique provident eum?
+                Greetings, Trailblazer! Welcome to Career Guru, not just a
+                platform but your epic saga in the vast landscape of
+                professional possibilities! 🌟 Our commitment is to be your
+                unwavering guiding light, casting brilliance on the intricate
+                pathways that lead to a profoundly satisfying and triumphant
+                future.
               </p>
               <NavLink
                 className="btn btn-primary text-white btn-lg"
@@ -160,7 +159,7 @@ const Homepage = () => {
                 data-bs-toggle="collapse"
                 data-bs-target="#question-1"
               >
-                Why CareerGuru?
+                What is Career Guru, and how can it help me?
               </button>
             </h2>
             <div
@@ -169,13 +168,11 @@ const Homepage = () => {
               data-bs-parent="#questions"
             >
               <div className="accordion-body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium voluptatum dolores accusamus quasi veniam, recusandae
-                minus molestiae rerum vel temporibus unde alias magni soluta
-                repudiandae nihil autem, enim quae magnam aperiam quis ipsum
-                maiores repellat. Laboriosam reprehenderit, dolorem cum eveniet
-                cupiditate architecto impedit velit? Dolore autem cum quod
-                similique atque!
+                Career Guru is your personalized compass in the professional
+                world. We guide you through diverse career paths, help you
+                discover your passions, provide educational insights, and
+                empower you to make informed decisions. Think of us as your
+                companion on the journey to a fulfilling and successful future.
               </div>
             </div>
           </div>
@@ -187,7 +184,7 @@ const Homepage = () => {
                 data-bs-toggle="collapse"
                 data-bs-target="#question-2"
               >
-                Why CareerGuru?
+                How do I navigate the various career paths on Career Guru?
               </button>
             </h2>
             <div
@@ -196,13 +193,11 @@ const Homepage = () => {
               data-bs-parent="#questions"
             >
               <div className="accordion-body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium voluptatum dolores accusamus quasi veniam, recusandae
-                minus molestiae rerum vel temporibus unde alias magni soluta
-                repudiandae nihil autem, enim quae magnam aperiam quis ipsum
-                maiores repellat. Laboriosam reprehenderit, dolorem cum eveniet
-                cupiditate architecto impedit velit? Dolore autem cum quod
-                similique atque!
+                Navigating career paths on Career Guru is intuitive. Explore our
+                curated content on different professions, from technology to the
+                arts. Dive into our insights, which offer a blend of
+                ground-level details and high-level perspectives. Your career
+                journey begins with a click!
               </div>
             </div>
           </div>
@@ -214,7 +209,8 @@ const Homepage = () => {
                 data-bs-toggle="collapse"
                 data-bs-target="#question-3"
               >
-                Why CareerGuru?
+                How can I stay updated on the latest trends and breakthroughs in
+                my chosen field?
               </button>
             </h2>
             <div
@@ -223,13 +219,10 @@ const Homepage = () => {
               data-bs-parent="#questions"
             >
               <div className="accordion-body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium voluptatum dolores accusamus quasi veniam, recusandae
-                minus molestiae rerum vel temporibus unde alias magni soluta
-                repudiandae nihil autem, enim quae magnam aperiam quis ipsum
-                maiores repellat. Laboriosam reprehenderit, dolorem cum eveniet
-                cupiditate architecto impedit velit? Dolore autem cum quod
-                similique atque!
+                Stay connected with Career Guru! We regularly update our
+                platform with the latest trends, breakthroughs, and insights in
+                various fields. Follow our blog, subscribe to newsletters, and
+                immerse yourself in the wealth of knowledge we provide.
               </div>
             </div>
           </div>
@@ -243,23 +236,23 @@ const Homepage = () => {
               <h2 className="text-center mb-4">Contact Info</h2>
               <ul className="list-group list-group-flush lead">
                 <li className="list-group-item">
-                  <span className="fw-bold">main Location:</span>50 main strrn
+                  <span className="fw-bold">Main Location:</span>50 Main Street,
+                  Boston
+                </li>
+                <li className="list-group-item">
+                  <span className="fw-bold">Phone Number:</span>50 main strrn
                   ostonst
                 </li>
                 <li className="list-group-item">
-                  <span className="fw-bold">main Location:</span>50 main strrn
+                  <span className="fw-bold">Email Address:</span>50 main strrn
                   ostonst
                 </li>
                 <li className="list-group-item">
-                  <span className="fw-bold">main Location:</span>50 main strrn
-                  ostonst
+                  <span className="fw-bold">Customer Support:</span>50 main
+                  strrn ostonst
                 </li>
                 <li className="list-group-item">
-                  <span className="fw-bold">main Location:</span>50 main strrn
-                  ostonst
-                </li>
-                <li className="list-group-item">
-                  <span className="fw-bold">main Location:</span>50 main strrn
+                  <span className="fw-bold">Social Media:</span>50 main strrn
                   ostonst
                 </li>
               </ul>
