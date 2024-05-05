@@ -151,7 +151,7 @@ export default function UserInfo() {
         setSkills(res.skills);
         setUserData(res);
         setUser(res);
-        Swal.fire("SUCCESS!", "Login successful", "success");
+        Swal.fire("SUCCESS!", "User Info Changed", "success");
         navigate("/settings");
       }
     } catch (err) {
