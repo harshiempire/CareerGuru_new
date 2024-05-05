@@ -11,7 +11,7 @@ const Settings = () => {
 
   const callSettings = async () => {
     try {
-      const res = await fetch("/dashboard", {
+      const res = await fetch("https://careerguru-new-backend.onrender.com/dashboard", {
         method: "GET",
         headers: {
           Accept: "application/json",

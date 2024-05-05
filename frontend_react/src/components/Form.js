@@ -148,7 +148,7 @@ const Form = () => {
     console.log(user);
     const { name, email, pwsd, cpwsd, mobilenumber, loc, exp, skills } = user;
 
-    const res = await fetch("/register", {
+    const res = await fetch("https://careerguru-new-backend.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

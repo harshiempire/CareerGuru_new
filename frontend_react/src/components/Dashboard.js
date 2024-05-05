@@ -30,7 +30,7 @@ const Dashboard = () => {
 
   const callDashboard = async () => {
     try {
-      const res = await fetch("/dashboard", {
+      const res = await fetch("https://careerguru-new-backend.onrender.com/dashboard", {
         method: "GET",
         headers: {
           Accept: "application/json",
@@ -64,7 +64,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("/getdata");
+        const res = await axios.get("https://careerguru-new-backend.onrender.com/getdata");
 
         if (res.status === 200) {
           const filteredJobs = res.data.filter(

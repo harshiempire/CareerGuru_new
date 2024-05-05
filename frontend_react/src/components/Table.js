@@ -48,7 +48,7 @@ function Userlist() {
 
   useEffect(() => {
     axios
-      .get("/getuser")
+      .get("https://careerguru-new-backend.onrender.com/getuser")
       .then((res) => {
         console.log(res);
         setuserlist(res.data);
