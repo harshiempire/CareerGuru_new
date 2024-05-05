@@ -31,6 +31,7 @@ const PORT = process.env.PORT;
 
 //it is already called before called by app
 app.use(require("./router/auth"));
+app.use(cors());
 
 // // app.get("/", (req, res) => {
 // //   res.send("this is app ");
