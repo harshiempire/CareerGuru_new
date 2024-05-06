@@ -31,7 +31,18 @@ const PORT = process.env.PORT;
 
 //it is already called before called by app
 app.use(require("./router/auth"));
-app.use(cors());
+app.use(function(req, res, next) {
+  // res.header("Access-Control-Allow-Origin", "*");
+  const allowedOrigins = ['https://career-guru-new.vercel.app', 'https://careerguru-new-backend.onrender.com', 'http://localhost:3000'];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+       res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-credentials", true);
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
+  next();
+});
 
 // // app.get("/", (req, res) => {
 // //   res.send("this is app ");
