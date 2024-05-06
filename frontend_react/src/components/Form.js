@@ -1,5 +1,4 @@
 import React from "react";
-import fimg from "../assets/images/icons8-facebook-48.png";
 import "./css/sform.css";
 import Navbar from "./Navbar";
 import Multiselect from "multiselect-react-dropdown";
@@ -148,7 +147,7 @@ const Form = () => {
     console.log(user);
     const { name, email, pwsd, cpwsd, mobilenumber, loc, exp, skills } = user;
 
-    const res = await fetch("https://careerguru-new-backend.onrender.com/register", {
+    const res = await fetch("https://careerguru-new.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

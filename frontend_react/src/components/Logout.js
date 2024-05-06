@@ -6,7 +6,7 @@ const Logout = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://careerguru-new-backend.onrender.com/logout", {
+    fetch("https://careerguru-new.onrender.com/logout", {
       method: "GET",
       headers: {
         Accept: "application/json",

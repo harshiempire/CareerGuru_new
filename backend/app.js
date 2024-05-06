@@ -33,7 +33,7 @@ const PORT = process.env.PORT;
 app.use(require("./router/auth"));
 app.use(function(req, res, next) {
   // res.header("Access-Control-Allow-Origin", "*");
-  const allowedOrigins = ['https://career-guru-new.vercel.app', 'https://careerguru-new-backend.onrender.com', 'http://localhost:3000'];
+  const allowedOrigins = ['https://career-guru-new.vercel.app', 'https://careerguru-new.onrender.com', 'http://localhost:3000'];
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
        res.setHeader('Access-Control-Allow-Origin', origin);

@@ -30,7 +30,7 @@ function SignUp() {
     e.preventDefault();
     const { name, email, pwsd, cpwsd } = user;
 
-    const res = await fetch("https://careerguru-new-backend.onrender.com/register", {
+    const res = await fetch("https://careerguru-new.onrender.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

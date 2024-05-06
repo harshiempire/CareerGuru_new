@@ -131,7 +131,7 @@ export default function UserInfo() {
   const PostData = async (e) => {
     e.preventDefault();
     try {
-      const data = await fetch("https://careerguru-new-backend.onrender.com/update", {
+      const data = await fetch("https://careerguru-new.onrender.com/update", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -169,7 +169,7 @@ export default function UserInfo() {
 
   const callUser = async () => {
     try {
-      const res = await fetch("https://careerguru-new-backend.onrender.com/dashboard", {
+      const res = await fetch("https://careerguru-new.onrender.com/dashboard", {
         method: "GET",
         headers: {
           Accept: "application/json",

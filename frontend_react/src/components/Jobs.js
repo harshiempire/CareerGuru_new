@@ -73,7 +73,7 @@ const Jobs = () => {
       jobDescription,
     } = job;
 
-    const res = await fetch("https://careerguru-new-backend.onrender.com/jobs", {
+    const res = await fetch("https://careerguru-new.onrender.com/jobs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
